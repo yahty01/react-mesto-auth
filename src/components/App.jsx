@@ -109,6 +109,7 @@ function App() {
       .signin({ email, password })
       .then((res) => {
         setIsLoggedIn(true);
+        setUserEmail(email);
         localStorage.setItem("JWT", res.token);
         navigate("/");
       })
