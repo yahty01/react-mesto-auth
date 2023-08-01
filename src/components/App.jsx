@@ -93,6 +93,7 @@ function App() {
       .then((res) => {
         setUserEmail(res.data.email);
         setIsRegistrationStatus(true);
+        navigate("/sign-in");
       })
       .catch((error) => {
         console.error(error);
@@ -100,7 +101,6 @@ function App() {
       })
       .finally(() => {
         setIsInfoTooltipOpen(true);
-        navigate("/sign-in");
       });
   };
 
